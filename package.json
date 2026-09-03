@@ -10,7 +10,7 @@
     "dev": "vite",
     "dev:server": "node server/index.js",
     "dev:all": "concurrently \"vite\" \"node server/index.js\"",
-    "build": "vite build",
+    "build": "cross-env NODE_ENV=production vite build",
     "preview": "vite preview",
     "electron:dev": "concurrently \"vite\" \"node server/index.js\" \"cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
     "electron:build": "vite build && electron-builder",
