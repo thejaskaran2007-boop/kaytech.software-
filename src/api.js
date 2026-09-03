@@ -8,7 +8,7 @@
  * Set VITE_API_URL in .env for production deployments.
  */
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const BASE = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api');
 
 // ─── HTTP helpers ─────────────────────────────────────────────────────────────
 async function get(path) {
